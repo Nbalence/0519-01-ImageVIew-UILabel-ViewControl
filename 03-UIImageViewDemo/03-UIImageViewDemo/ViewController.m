@@ -35,6 +35,7 @@
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changeImageHighlightedState) userInfo:nil repeats:YES];
 #else
    //添加火焰视图
+    //
     UIImageView *fireView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:fireView];
     
@@ -73,6 +74,7 @@
     int x1 = arc4random() % screenW;
     //雪花的随机倍数
     double scale = 1.0 + (arc4random() % 100) / 100.0;
+    
     snowView.frame = CGRectMake(x1, -(30 * scale), 30 * scale, 30 * scale);
    
     //动画时间随机倍数
